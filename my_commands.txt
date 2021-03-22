@@ -1,0 +1,14 @@
+pip list
+pip install virtualenv
+cls
+virtualenv myenv
+cls
+myenv\scripts\activate
+pip list
+pip install django
+django-admin startproject backend
+cd backend
+python manage.py runserver
+python manage.py startapp base
+django-rest-framework.org
+pip install djangorestframework
