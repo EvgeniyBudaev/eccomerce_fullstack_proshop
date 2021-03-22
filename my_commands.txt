@@ -15,3 +15,5 @@ django-rest-framework.org
 pip install djangorestframework
 python manage.py makemigrations
 python manage.py migrate
+
+pip install django-cors-headers
