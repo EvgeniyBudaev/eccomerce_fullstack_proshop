@@ -22,7 +22,7 @@ def getRoutes(request):
     '/api/products/<id>/',
 
     '/api/products/delete/<id>/',
-    '/api/products/<update>/<id>/',
+    '/api/products/<update>/<id>/'
   ]
   # return JsonResponse(routes, safe=False)  #  Если safe=False, то можно передать любой объект для преобразования в JSON (иначе – только dict)
   return Response(routes)
