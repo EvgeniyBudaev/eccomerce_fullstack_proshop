@@ -24,3 +24,15 @@ pip install django-cors-headers
 python manage.py createsuperuser
 
 pip install pillow
+
+
+# git commands
+rm -rf .git
+rm .gitignore
+ls -lha
+pwd
+cd Documents/CODE/FULLSTACK/eccomerce_fullstack_proshop/
+mv ecom_tmp/ frontend  # меняем название на папку frontend
+git add .
+git status
+
