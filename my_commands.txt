@@ -14,6 +14,7 @@ python manage.py runserver
 python manage.py startapp base
 django-rest-framework.org
 pip install djangorestframework
+
 python manage.py makemigrations
 python manage.py migrate
 
@@ -21,3 +22,5 @@ pip install django-cors-headers
 
 
 python manage.py createsuperuser
+
+pip install pillow
