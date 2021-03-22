@@ -2,11 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89430464-267c-4af7-8e7a-51f2a3b1725c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/base/serailizers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/ecommerce_frontend_shop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/airpods.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/alexa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/camera.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/mouse.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/phone.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/playstation.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/sample.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/screenshot_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/screenshot_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/footer/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/header/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/loader/Loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/message/Message.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/product/Product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/rating/Rating.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/constants/productConstants.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/products.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/actions/productAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/reducers/productReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/homeScreen/HomeScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/productScreen/ProductScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/base/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce_frontend_proshop/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce_frontend_proshop/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +91,7 @@
       <workItem from="1616402462181" duration="125000" />
       <workItem from="1616403546989" duration="4682000" />
       <workItem from="1616409047101" duration="6668000" />
+      <workItem from="1616435077169" duration="1218000" />
     </task>
     <servers />
   </component>
@@ -64,6 +108,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
