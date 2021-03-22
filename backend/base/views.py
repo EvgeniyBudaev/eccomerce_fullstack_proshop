@@ -7,6 +7,7 @@ from .products import products
 
 # Create your views here.
 
+
 @api_view(['GET'])
 def getRoutes(request):
   routes = [
