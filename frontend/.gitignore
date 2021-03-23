@@ -75,6 +75,8 @@ pids
 # Intellij
 *.iml
 .idea
+/.idea
+*.idea
 
 # Android Studio
 captures/
