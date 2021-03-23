@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89430464-267c-4af7-8e7a-51f2a3b1725c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/base/serailizers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/base/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/base/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/base/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +33,15 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1q6aOLs38TLaFWL5CO3SllzThWR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -58,7 +63,8 @@
       <workItem from="1616409047101" duration="6668000" />
       <workItem from="1616435077169" duration="3021000" />
       <workItem from="1616481233994" duration="1974000" />
-      <workItem from="1616483233429" duration="1954000" />
+      <workItem from="1616483233429" duration="8187000" />
+      <workItem from="1616506129234" duration="4745000" />
     </task>
     <servers />
   </component>
@@ -78,6 +84,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/frontend" />
     </ignored-roots>
