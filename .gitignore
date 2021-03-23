@@ -67,6 +67,9 @@ frontend/node_modules/
 .idea
 /.idea
 *.idea
+frontend/.idea
+**.idea
+*/.idea/*
 
 # Runtime data
 pids
@@ -76,7 +79,6 @@ pids
 
 # Intellij
 *.iml
-.idea
 
 # Android Studio
 captures/
@@ -126,7 +128,6 @@ Pods/
 *.crx
 
 # Local config/setup
-database.rules.json
 samples/android/Continote/app/src/main/res/values/strings.xml
 samples/chrome-extension/Continote/scripts/config.js
 samples/ios/Continote/Continote/Constants.swift
@@ -142,6 +143,5 @@ samples/ios/Continote/Continote/FCNContinue.h
 samples/ios/Continote/Continote/FCNContinue.m
 
 # Misc.
-.DS_Store
 *.swp
 
