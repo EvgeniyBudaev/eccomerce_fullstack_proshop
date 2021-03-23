@@ -6,7 +6,7 @@ import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import HomeScreen from "./screens/homeScreen/HomeScreen"
 import ProductScreen from "./screens/productScreen/ProductScreen"
-import CartScreen from "./screens/cartScreen/cartScreen";
+import CartScreen from "./screens/cartScreen/CartScreen";
 
 
 function App() {
