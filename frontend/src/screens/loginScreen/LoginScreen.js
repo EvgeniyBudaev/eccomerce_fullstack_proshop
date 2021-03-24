@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
-import FormContainer from "../../containers/form/FormContainer";
-import {login} from "../../redux/actions/userAction";
-import Message from "../../components/message/Message";
-import Loader from "../../components/loader/Loader";
+import FormContainer from "../../containers/form/FormContainer"
+import { login } from "../../redux/actions/userAction"
+import Message from "../../components/message/Message"
+import Loader from "../../components/loader/Loader"
 
 const LoginScreen = ({location, history}) => {
   const [email, setEmail] = useState('')
@@ -28,6 +28,7 @@ const LoginScreen = ({location, history}) => {
     e.preventDefault()
     dispatch(login(email, password))
   }
+
 
   return (
     <FormContainer>
@@ -60,7 +61,7 @@ const LoginScreen = ({location, history}) => {
           </Form.Control>
         </Form.Group>
 
-        <Button type='submit' variant='primary'>Sign In</Button>
+        <Button type='submit' variant='primary'>Login</Button>
       </Form>
 
       <Row className='py-3'>
@@ -68,6 +69,7 @@ const LoginScreen = ({location, history}) => {
           New Customer? <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Register</Link>
         </Col>
       </Row>
+
     </FormContainer>
   )
 }
