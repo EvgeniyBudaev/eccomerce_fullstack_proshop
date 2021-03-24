@@ -13,6 +13,7 @@ from .models import Product
 from .products import products
 from .serializers import ProductSerializer, UserSerializer, UserSerializerWithToken
 
+
 # Create your views here.
 
 
@@ -21,7 +22,6 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     data = super().validate(attrs)
 
     serializer = UserSerializerWithToken(self.user).data
-
     for k, v in serializer.items():
       data[k] = v
 
