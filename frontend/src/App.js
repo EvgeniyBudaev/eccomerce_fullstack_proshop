@@ -10,6 +10,7 @@ import CartScreen from "./screens/cartScreen/CartScreen"
 import LoginScreen from "./screens/loginScreen/LoginScreen"
 import RegisterScreen from "./screens/registerScreen/RegisterScreen"
 import ProfileScreen from "./screens/profileScreen/ProfileScreen";
+import ShippingScreen from "./screens/shippingScreen/ShippingScreen";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login/" component={LoginScreen} />
           <Route path="/register/" component={RegisterScreen} />
           <Route path="/profile/" component={ProfileScreen} />
+          <Route path="/shipping/" component={ShippingScreen} />
           <Route path="/product/:id" component={ProductScreen} />
           <Route path="/cart/:id?" component={CartScreen} />
         </Container>
