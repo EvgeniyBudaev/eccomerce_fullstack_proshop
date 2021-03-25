@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 
-import {getUserDetails, register, updateUserProfile} from "../../redux/actions/userAction"
+import { getUserDetails, updateUserProfile } from "../../redux/actions/userAction"
 import Message from "../../components/message/Message"
 import Loader from "../../components/loader/Loader"
-import FormContainer from "../../containers/form/FormContainer";
-import {USER_UPDATE_PROFILE_RESET} from "../../constants/userConstants";
+import { USER_UPDATE_PROFILE_RESET } from "../../constants/userConstants"
 
 
 const ProfileScreen = ({ history }) => {

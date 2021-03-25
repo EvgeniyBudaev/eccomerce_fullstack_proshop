@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {Navbar, Nav, Container, Row, NavDropdown} from 'react-bootstrap'
+import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
-import {logout} from "../../redux/actions/userAction";
+import { logout } from "../../redux/actions/userAction";
 
 const Header = () => {
   const userLogin = useSelector(state => state.userLogin)
