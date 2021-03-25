@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89430464-267c-4af7-8e7a-51f2a3b1725c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/placeOrderScreen/PlaceOrderScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/base/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/base/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/base/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/base/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <workItem from="1616506129234" duration="5596000" />
       <workItem from="1616568639865" duration="1591000" />
       <workItem from="1616588695961" duration="11613000" />
-      <workItem from="1616654834215" duration="14030000" />
+      <workItem from="1616654834215" duration="16880000" />
     </task>
     <servers />
   </component>
