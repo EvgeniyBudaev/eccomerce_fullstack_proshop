@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89430464-267c-4af7-8e7a-51f2a3b1725c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/screens/orderScreen/orderScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/base/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/placeOrderScreen/PlaceOrderScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/placeOrderScreen/PlaceOrderScreen.js" afterDir="false" />
-    </list>
+    <list default="true" id="89430464-267c-4af7-8e7a-51f2a3b1725c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +69,7 @@
       <workItem from="1618544340182" duration="5435000" />
       <workItem from="1618584893132" duration="643000" />
       <workItem from="1618663757358" duration="6235000" />
-      <workItem from="1618715100080" duration="4215000" />
+      <workItem from="1618715100080" duration="4742000" />
     </task>
     <servers />
   </component>
