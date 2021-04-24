@@ -1,3 +1,15 @@
+# Форматирование кода
+# на mac option + command + L
+# на windows ctrl + alt + I
+
+Запуск виртуального окружения проекта В Windows:
+.\venv\Scripts\activate
+В macOS или Linux:
+source venv/bin/activate
+
+Остановка виртуального окружения
+deactivate
+
 pip list
 pip install virtualenv
 cls

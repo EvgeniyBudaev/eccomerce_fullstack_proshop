@@ -12,89 +12,90 @@ from datetime import datetime
 
 from .models import Product, Order, OrderItem, ShippingAddress
 from .products import products
-from .serializers import ProductSerializer, UserSerializer, UserSerializerWithToken, OrderSerializer
+from .serializers import ProductSerializer, UserSerializer, \
+    UserSerializerWithToken, OrderSerializer
 
 
 # Create your views here.
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-  def validate(self, attrs):
-    data = super().validate(attrs)
+    def validate(self, attrs):
+        data = super().validate(attrs)
 
-    serializer = UserSerializerWithToken(self.user).data
-    for k, v in serializer.items():
-      data[k] = v
+        serializer = UserSerializerWithToken(self.user).data
+        for k, v in serializer.items():
+            data[k] = v
 
-    return data
+        return data
 
 
 class MyTokenObtainPairView(TokenObtainPairView):
-  serializer_class = MyTokenObtainPairSerializer
+    serializer_class = MyTokenObtainPairSerializer
 
 
 @api_view(['POST'])
 def registerUser(request):
-  data = request.data
-  try:
-    user = User.objects.create(
-      first_name=data['name'],
-      username=data['email'],
-      email=data['email'],
-      password=make_password(data['password'])
-    )
-    serializer = UserSerializerWithToken(user, many=False)
-    return Response(serializer.data)
-  except:
-    message = {'detail': 'User with this email already exists'}
-    return Response(message, status=status.HTTP_400_BAD_REQUEST)
+    data = request.data
+    try:
+        user = User.objects.create(
+            first_name=data['name'],
+            username=data['email'],
+            email=data['email'],
+            password=make_password(data['password'])
+        )
+        serializer = UserSerializerWithToken(user, many=False)
+        return Response(serializer.data)
+    except:
+        message = {'detail': 'User with this email already exists'}
+        return Response(message, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def updateUserProfile(request):
-  user = request.user
-  serializer = UserSerializerWithToken(user, many=False)
-  data = request.data
-  user.first_name = data['name']
-  user.username = data['email']
-  user.email = data['email']
-  if data['password'] != '':
-    user.password = make_password(data['password'])
-  user.save()
-  return Response(serializer.data)
+    user = request.user
+    serializer = UserSerializerWithToken(user, many=False)
+    data = request.data
+    user.first_name = data['name']
+    user.username = data['email']
+    user.email = data['email']
+    if data['password'] != '':
+        user.password = make_password(data['password'])
+    user.save()
+    return Response(serializer.data)
 
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def getUserProfile(request):
-  user = request.user
-  serializer = UserSerializer(user, many=False)
-  return Response(serializer.data)
+    user = request.user
+    serializer = UserSerializer(user, many=False)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])
 @permission_classes([IsAdminUser])
 def getUsers(request):
-  users = User.objects.all()
-  serializer = UserSerializer(users, many=True)
-  # return JsonResponse(products, safe=False)
-  return Response(serializer.data)
+    users = User.objects.all()
+    serializer = UserSerializer(users, many=True)
+    # return JsonResponse(products, safe=False)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])
 def getProducts(request):
-  products = Product.objects.all()
-  serializer = ProductSerializer(products, many=True)
-  # return JsonResponse(products, safe=False)
-  return Response(serializer.data)
+    products = Product.objects.all()
+    serializer = ProductSerializer(products, many=True)
+    # return JsonResponse(products, safe=False)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])
 def getProduct(request, pk):
-  product = Product.objects.get(_id=pk)
-  serializer = ProductSerializer(product, many=False)
-  return Response(serializer.data)
+    product = Product.objects.get(_id=pk)
+    serializer = ProductSerializer(product, many=False)
+    return Response(serializer.data)
 
 
 @api_view(['POST'])
@@ -106,7 +107,8 @@ def addOrderItems(request):
     orderItems = data['orderItems']
 
     if orderItems and len(orderItems) == 0:
-        return Response({'detail': 'No Order Items'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'detail': 'No Order Items'},
+                        status=status.HTTP_400_BAD_REQUEST)
     else:
 
         # (1) Create order
@@ -154,33 +156,34 @@ def addOrderItems(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def getMyOrders(request):
-  user = request.user
-  orders = user.order_set.all()
-  serializer = OrderSerializer(orders, many=True)
-  return Response(serializer.data)
-
+    user = request.user
+    orders = user.order_set.all()
+    serializer = OrderSerializer(orders, many=True)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def getOrderById(request, pk):
-  user= request.user
-  order = Order.objects.get(_id=pk)
-  try:
-    if user.is_staff or order.user == user:
-      serializer = OrderSerializer(order, many=False)
-      return Response(serializer.data)
-    else:
-      Response({'detail': 'Not authorized to to view this order'}, status=status.HTTP_400_BAD_REQUEST)
-  except:
-    return Response({'detail': 'Order does not exist'}, status=status.HTTP_400_BAD_REQUEST)
+    user = request.user
+    try:
+        order = Order.objects.get(_id=pk)
+        if user.is_staff or order.user == user:
+            serializer = OrderSerializer(order, many=False)
+            return Response(serializer.data)
+        else:
+            Response({'detail': 'Not authorized to to view this order'},
+                     status=status.HTTP_400_BAD_REQUEST)
+    except:
+        return Response({'detail': 'Order does not exist'},
+                        status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def updateOrderToPaid(request, pk):
-  order = Order.objects.get(_id=pk)
-  order.isPaid = True
-  order.paidAt = datetime.now()
-  order.save()
-  return Response('Order was paid')
+    order = Order.objects.get(_id=pk)
+    order.isPaid = True
+    order.paidAt = datetime.now()
+    order.save()
+    return Response('Order was paid')
