@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { LinkContainer } from 'react-router-bootstrap'
 import { Table, Button } from 'react-bootstrap'
-import FormContainer from "../../containers/form/FormContainer"
-import { listUsers } from "../../redux/actions/userAction"
+import { listUsers, deleteUser } from "../../redux/actions/userAction"
 import Message from "../../components/message/Message"
 import Loader from "../../components/loader/Loader"
 
@@ -16,16 +15,21 @@ function UserListScreen({ history }) {
     const userLogin = useSelector(state => state.userLogin)
     const {userInfo} = userLogin
 
+    const userDelete = useSelector(state => state.userDelete)
+    const {success: successDelete} = userDelete
+
     useEffect(() => {
         if (userInfo && userInfo.isAdmin) {
                     dispatch(listUsers())
         } else {
              history.push('/login')
         }
-    }, [dispatch, history])
+    }, [dispatch, history, successDelete])
 
     const deleteHandler = (id) => {
-
+        if (window.confirm('Are you sure you want to delete this user?')) {
+            dispatch(deleteUser(id))
+        }
     }
 
     return (
