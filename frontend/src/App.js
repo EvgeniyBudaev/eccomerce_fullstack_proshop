@@ -14,10 +14,9 @@ import ShippingScreen from "./screens/shippingScreen/ShippingScreen"
 import PaymentScreen from "./screens/paymentScreen/PaymentScreen"
 import PlaceOrderScreen from "./screens/placeOrderScreen/PlaceOrderScreen"
 import OrderScreen from "./screens/orderScreen/orderScreen"
-import UserListScreen from "./screens/userListScreen/userListScreen"
+import UserListScreen from "./screens/userListScreen/UserListScreen"
 import UserEditScreen from "./screens/userEditScreen/UserEditScreen"
-
-
+import ProductListScreen from "./screens/productListScreen/ProductListScreen"
 
 function App() {
   return (
@@ -37,6 +36,7 @@ function App() {
           <Route path="/cart/:id?" component={CartScreen} />
 
           <Route path="/admin/userlist" component={UserListScreen} />
+          <Route path="/admin/productlist" component={ProductListScreen} />
           <Route path="/admin/user/:id/edit" component={UserEditScreen} />
         </Container>
       </main>

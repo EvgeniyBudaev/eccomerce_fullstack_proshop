@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89430464-267c-4af7-8e7a-51f2a3b1725c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/screens/productListScreen/ProductListScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/userConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/userConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/userAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/userAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/reducers/userReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/userEditScreen/UserEditScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/userEditScreen/UserEditScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/userListScreen/userListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/userListScreen/UserListScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,7 @@
       <workItem from="1619661901884" duration="3800000" />
       <workItem from="1619755724569" duration="1191000" />
       <workItem from="1619803184424" duration="2156000" />
-      <workItem from="1619846851725" duration="5182000" />
+      <workItem from="1619846851725" duration="7264000" />
     </task>
     <servers />
   </component>
