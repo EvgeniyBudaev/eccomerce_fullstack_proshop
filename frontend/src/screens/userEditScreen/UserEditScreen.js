@@ -5,7 +5,8 @@ import {Form, Button} from 'react-bootstrap'
 import FormContainer from "../../containers/form/FormContainer"
 import Message from "../../components/message/Message"
 import Loader from "../../components/loader/Loader"
-import {getUserDetails} from "../../redux/actions/userAction";
+import {getUserDetails, updateUser} from "../../redux/actions/userAction"
+import {USER_UPDATE_RESET} from "../../constants/userConstants"
 
 
 const UserEditScreen = ({match, history}) => {
@@ -19,18 +20,28 @@ const UserEditScreen = ({match, history}) => {
     const userDetails = useSelector(state => state.userDetails)
     const {error, loading, user} = userDetails
 
+    const userUpdate = useSelector(state => state.userUpdate)
+    const {error: errorUpdate, loading: loadingUpdate, success: successUpdate} = userUpdate
+
     useEffect(() => {
-        if (!user.name ?? user._id !== Number(userId)) {
-            dispatch(getUserDetails(userId))
+        if (successUpdate) {
+            dispatch({type: USER_UPDATE_RESET})
+            history.push('/admin/userlist')
         } else {
-            setName(user.name)
-            setEmail(user.email)
-            setIsAdmin(user.isAdmin)
+            if (!user.name ?? user._id !== Number(userId)) {
+                dispatch(getUserDetails(userId))
+            } else {
+                setName(user.name)
+                setEmail(user.email)
+                setIsAdmin(user.isAdmin)
+            }
         }
-    }, [user, userId])
+
+    }, [user, userId, successUpdate, history])
 
     const submitHandler = (e) => {
         e.preventDefault()
+        dispatch(updateUser({_id: user._id, name, email, isAdmin}))
     }
 
 
@@ -41,6 +52,9 @@ const UserEditScreen = ({match, history}) => {
             </Link>
             <FormContainer>
             <h1>User Edit</h1>
+                {loadingUpdate && <Loader />}
+                {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
+
                 {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message> : (
                     <Form onSubmit={submitHandler}>
                 <Form.Group controlId='name'>
