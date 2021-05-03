@@ -4,8 +4,11 @@ from . import views
 
 urlpatterns = [
   path('products/', views.getProducts, name="products"),
+  path('products/create/', views.createProduct, name="product-create"),
   path('products/<str:pk>/', views.getProduct, name="product"),
+  path('products/update/<str:pk>/', views.updateProduct, name="product-update"),
   path('products/delete/<str:pk>/', views.deleteProduct, name="product-delete"),
+
   path('users/', views.getUsers, name="users"),
   path('users/profile/', views.getUserProfile, name="users-profile"),
   path('users/profile/update/', views.updateUserProfile, name="user-profile-update"),
@@ -14,6 +17,7 @@ urlpatterns = [
   path('users/<str:pk>/', views.getUserById, name='user'),
   path('users/update/<str:pk>/', views.updateUser, name='user-update'),
   path('users/delete/<str:pk>/', views.deleteUser, name='user-delete'),
+
   path('orders/add/', views.addOrderItems, name='orders-add'),
   path('orders/myorders/', views.getMyOrders, name='myorders'),
   path('orders/<str:pk>/', views.getOrderById, name='user-order'),
