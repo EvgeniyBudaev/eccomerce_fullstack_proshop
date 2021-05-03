@@ -147,14 +147,14 @@ def createProduct(request):
 @api_view(['PUT'])
 @permission_classes([IsAdminUser])
 def updateProduct(request, pk):
-    date = request.data
+    data = request.data
     product = Product.objects.get(_id=pk)
-    product.name = date['name']
-    product.price = date['price']
-    product.brand = date['brand']
-    product.countInStock = date['countInStock']
-    product.category = date['category']
-    product.description = date['description']
+    product.name = data['name']
+    product.price = data['price']
+    product.brand = data['brand']
+    product.countInStock = data['countInStock']
+    product.category = data['category']
+    product.description = data['description']
     product.save()
     serializer = ProductSerializer(product, many=False)
     return Response(serializer.data)
