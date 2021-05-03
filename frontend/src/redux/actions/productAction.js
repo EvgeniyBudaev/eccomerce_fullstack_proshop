@@ -108,3 +108,4 @@ export const createProduct = () => async (dispatch, getState) => {
         })
     }
 }
+
