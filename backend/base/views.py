@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from django.http import JsonResponse
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
@@ -8,10 +6,10 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from datetime import datetime
 
 from .models import Product, Order, OrderItem, ShippingAddress, Review
-from .products import products
 from .serializers import ProductSerializer, UserSerializer, \
     UserSerializerWithToken, OrderSerializer
 
@@ -118,8 +116,19 @@ def getProducts(request):
     if query == None:
         query = ''
     products = Product.objects.filter(name__icontains=query)
+    page = request.query_params.get('page')
+    paginator = Paginator(products, 2)
+    try:
+        products = paginator.page(page)
+    except PageNotAnInteger:
+        products = paginator.page(1)
+    except EmptyPage:
+        products = paginator.page(paginator.num_pages)
+    if page == None:
+        page = 1
+    page = int(page)
     serializer = ProductSerializer(products, many=True)
-    return Response(serializer.data)
+    return Response({'products': serializer.data, 'page': page, 'pages': paginator.num_pages})
 
 
 @api_view(['GET'])
